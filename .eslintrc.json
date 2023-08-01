@@ -1,0 +1,88 @@
+{
+	"root": true,
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true
+	},
+	"extends": [
+		"@nuxtjs/eslint-config-typescript",
+		"plugin:nuxt/recommended",
+		"plugin:promise/recommended",
+		"plugin:prettier/recommended",
+		"plugin:tailwindcss/recommended",
+		"plugin:markdown/recommended"
+	],
+	"overrides":[
+		{
+			"files":["*.vue"],
+			"globals": {
+				"defineEmits":"readonly",
+				"defineProps":"readonly",
+				"withDefaults":"readonly"
+			},
+			"parser":"vue-eslint-parser",
+			"parserOptions": {
+				"parser": "@typescript-eslint/parser"
+			}
+		}
+	],
+	"parser": "vue-eslint-parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"parser": "@typescript-eslint/parser",
+		"sourceType": "module"
+	},
+	"plugins": [
+		"vue",
+		"@typescript-eslint",
+		"simple-import-sort",
+		"import",
+		"check-file"
+	],
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{
+				"endOfLine": "auto"
+			}
+		],
+		//Import/Export
+		"simple-import-sort/exports": "error",
+		"import/first": "error",
+		"import/newline-after-import":"error",
+		"import/no-duplicates":"error",
+		//tailwind
+		"tailwindcss/enforces-negative-arbitaary-values":["off"],
+		//vue
+		"vue/no-v-html": "off",
+		"vue/multi-word-component-names": "off",
+		"vue/no-multiple-template-root": "off",
+		"vue/padding-line-between-blocks": "error",
+		"vue/component-name-in-template-casing": ["error", "PascalCase"],
+		"vue/component-tags-order": [
+		"error",
+				{
+					"order": [
+						"i18n",
+						"script:not([setup])",
+						"script:is([setup])",
+						"script[setup][lang=js]",
+						"script[setup][lang=ts]",
+						"template",
+						"style:not([scoped])",
+						"style[scoped]"
+					]
+				}
+		],
+		"vue/html-self-closing": [
+			"error",
+			{
+				"html": {
+					"normal": "never",
+					"void": "any"
+				}
+			}
+		]
+	}
+}
