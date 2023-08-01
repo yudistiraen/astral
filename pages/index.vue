@@ -1,31 +1,79 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import InstagramIcon from '~/statics/icons/instagram.vue'
+</script>
 
 <template>
   <div class="relative grid grid-cols-4">
-    <div class="">
-      <div class="sticky top-0 text-center">
-        <h1 class="text-3xl font-bold">John Doe Commission</h1>
-        <div>
-          <span>Open</span>
+    <div class="mx-5 mt-10">
+      <div class="sticky top-5">
+        <div id="profile">
+          <div class="flex flex-col gap-5">
+            <div class="h-32 w-32 overflow-hidden rounded-full bg-white p-5 shadow-md">
+              <img src="../statics/bust_up.jpg" class="h-full w-full object-cover" />
+            </div>
+            <h1 class="text-3xl font-bold">John Doe Commission</h1>
+            <div>
+              <span
+                class="pointer-events-none rounded-xl bg-green-400 px-5 py-2 text-white shadow-md"
+                >Open</span
+              >
+            </div>
+            <p class="text-gray-500">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus commodi amet ipsa
+              exercitationem assumenda rerum veniam atque soluta nemo, fugit illo consequatur quod
+              quos sed hic libero praesentium animi et.
+            </p>
+          </div>
+        </div>
+        <div id="contacts" class="mt-10 flex flex-col gap-3">
+          <div id="instagram" class="group">
+            <a href="https://www.instagram.com/yudis.enugraha/" target="_blank">
+              <div class="flex gap-3">
+                <div
+                  class="relative flex h-10 w-10 cursor-pointer rounded-full bg-white text-center shadow-md"
+                >
+                  <InstagramIcon class="m-auto h-5 w-5 transition-all group-hover:animate-jello" />
+                  <span class="sr-only">Follow on Instagram</span>
+                </div>
+                <div class="flex grow items-center">Instagram</div>
+              </div>
+            </a>
+          </div>
+          <div id="whatsapp" class="group">
+            <a href="https://www.instagram.com/yudis.enugraha/" target="_blank">
+              <div class="flex gap-3">
+                <div
+                  class="relative flex h-10 w-10 cursor-pointer rounded-full bg-white text-center shadow-md"
+                >
+                  <InstagramIcon class="m-auto h-5 w-5 transition-all group-hover:animate-jello" />
+                  <span class="sr-only">Follow on Instagram</span>
+                </div>
+                <div class="flex grow items-center">Instagram</div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-span-3 m-5">
       <section>
         <div id="hero" class="mx-auto mt-5 max-w-container">
-          <div
-            class="-ml-5 flex items-center justify-center gap-5 [transform:skew(5deg)] max-md:hidden"
-          >
+          <div class="-ml-5 flex items-center justify-center gap-5 max-md:hidden">
             <div
               class="group flex flex-1 overflow-hidden transition-all duration-700 hover:grow-[10]"
             >
               <div class="relative h-96 flex-1">
                 <img
-                  class="h-full w-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
-                  src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg"
+                  src="../statics/bust_up.jpg"
+                  class="h-full w-full object-cover transition-all duration-700 group-hover:grayscale-0"
                 />
+
+                <!-- <img
+                  class="h-full w-full object-cover transition-all duration-700 group-hover:grayscale-0"
+                  src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg"
+                /> -->
                 <div
-                  class="absolute bottom-0 left-0 min-w-full origin-[0%_0%] -rotate-90 whitespace-nowrap bg-red-300 p-2 text-center text-sm text-black transition-all duration-700 group-hover:rotate-90 group-hover:bg-black/50 group-hover:text-xl group-hover:text-white group-hover:[transform:skew(-5deg)]"
+                  class="absolute bottom-0 left-0 min-w-full origin-[0%_0%] -rotate-90 whitespace-nowrap bg-red-300 p-2 text-center text-sm text-black transition-all duration-700 group-hover:rotate-90 group-hover:bg-black/50 group-hover:text-xl group-hover:text-white group-hover:[transform:skew(0deg)]"
                 >
                   Plotting Cat
                 </div>
@@ -36,11 +84,11 @@
             >
               <div class="relative h-96 flex-1">
                 <img
-                  class="h-full w-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
+                  class="h-full w-full object-cover transition-all duration-700 group-hover:grayscale-0"
                   src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg"
                 />
                 <div
-                  class="absolute bottom-0 left-0 min-w-full origin-[0%_0%] -rotate-90 whitespace-nowrap bg-red-300 p-2 text-center text-sm text-black transition-all duration-700 group-hover:rotate-90 group-hover:bg-black/50 group-hover:text-xl group-hover:text-white group-hover:[transform:skew(-5deg)]"
+                  class="absolute bottom-0 left-0 min-w-full origin-[0%_0%] -rotate-90 whitespace-nowrap bg-red-300 p-2 text-center text-sm text-black transition-all duration-700 group-hover:rotate-90 group-hover:bg-black/50 group-hover:text-xl group-hover:text-white group-hover:[transform:skew(0deg)]"
                 >
                   Plotting Cat
                 </div>
@@ -51,11 +99,11 @@
             >
               <div class="relative h-96 flex-1">
                 <img
-                  class="h-full w-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
+                  class="h-full w-full object-cover transition-all duration-700 group-hover:grayscale-0"
                   src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg"
                 />
                 <div
-                  class="absolute bottom-0 left-0 min-w-full origin-[0%_0%] -rotate-90 whitespace-nowrap bg-red-300 p-2 text-center text-sm text-black transition-all duration-700 group-hover:rotate-90 group-hover:bg-black/50 group-hover:text-xl group-hover:text-white group-hover:[transform:skew(-5deg)]"
+                  class="absolute bottom-0 left-0 min-w-full origin-[0%_0%] -rotate-90 whitespace-nowrap bg-red-300 p-2 text-center text-sm text-black transition-all duration-700 group-hover:rotate-90 group-hover:bg-black/50 group-hover:text-xl group-hover:text-white group-hover:[transform:skew(0deg)]"
                 >
                   Plotting Cat
                 </div>
@@ -66,11 +114,11 @@
             >
               <div class="relative h-96 flex-1">
                 <img
-                  class="h-full w-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
+                  class="h-full w-full object-cover transition-all duration-700 group-hover:grayscale-0"
                   src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg"
                 />
                 <div
-                  class="absolute bottom-0 left-0 min-w-full origin-[0%_0%] -rotate-90 whitespace-nowrap bg-red-300 p-2 text-center text-sm text-black transition-all duration-700 group-hover:rotate-90 group-hover:bg-black/50 group-hover:text-xl group-hover:text-white group-hover:[transform:skew(-5deg)]"
+                  class="absolute bottom-0 left-0 min-w-full origin-[0%_0%] -rotate-90 whitespace-nowrap bg-red-300 p-2 text-center text-sm text-black transition-all duration-700 group-hover:rotate-90 group-hover:bg-black/50 group-hover:text-xl group-hover:text-white group-hover:[transform:skew(0deg)]"
                 >
                   Plotting Cat
                 </div>
@@ -81,11 +129,11 @@
             >
               <div class="relative h-96 flex-1">
                 <img
-                  class="h-full w-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
+                  class="h-full w-full object-cover transition-all duration-700 group-hover:grayscale-0"
                   src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg"
                 />
                 <div
-                  class="absolute bottom-0 left-0 min-w-full origin-[0%_0%] -rotate-90 whitespace-nowrap bg-red-300 p-2 text-center text-sm text-black transition-all duration-700 group-hover:rotate-90 group-hover:bg-black/50 group-hover:text-xl group-hover:text-white group-hover:[transform:skew(-5deg)]"
+                  class="absolute bottom-0 left-0 min-w-full origin-[0%_0%] -rotate-90 whitespace-nowrap bg-red-300 p-2 text-center text-sm text-black transition-all duration-700 group-hover:rotate-90 group-hover:bg-black/50 group-hover:text-xl group-hover:text-white group-hover:[transform:skew(0deg)]"
                 >
                   Plotting Cat
                 </div>
